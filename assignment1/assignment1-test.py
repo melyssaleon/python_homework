@@ -1,12 +1,9 @@
+#assigment1.py
 # task 1: Hello!
-
-import assignment1 as a1
-
 def hello():
     return "Hello!"
 
 #task 2: greet with a formatted string
-
 def greet(name):
    # assert a1.greet("James") == "Hello, James!"
     return f"Hello, {name}!"
@@ -97,7 +94,7 @@ def grade(*args):
 
 def repeat(string,count):
     result = ""
-    for i in range(count):
+    for _ in range(count):
         result += string
     return result
 #Task 7: Student Scores, Using **kwargs
@@ -110,13 +107,14 @@ def student_scores(mode, **kwargs):
         return sum(kwargs.values()) / len(kwargs)
     elif mode == "best":
         return max(kwargs, key=kwargs.get)
+    
 #Task 8: Titleize, with String and List Operations
 #def test_titleize():
  #   assert a1.titleize("war and peace") == "War and Peace"
   #  assert a1.titleize("a separate peace") == "A Separate Peace"
 #    assert a1.titleize("after on") == "After On"
 
-def Titleize(text):
+def titleize(text):
     small_words = ["a", "on", "the", "of", "and", "is", "in"]
     words = text.split()
     result = []
@@ -159,8 +157,9 @@ def pig_latin(text):
         else:
             i = 0
             while i < len(word) and word[i].lower() not in vowels:
-                i += 2
-                break
+               if word[i:i+2].lower() == "qu":
+                    i += 2
+                    break
             i += 1
             result.append(word[i:] + word[:i] + "ay")
     return " ".join(result)
