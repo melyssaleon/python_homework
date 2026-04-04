@@ -5,19 +5,11 @@ def hello():
 
 #task 2: greet with a formatted string
 def greet(name):
-   # assert a1.greet("James") == "Hello, James!"
+
     return f"Hello, {name}!"
 
 # task 3: calculate
-#def test_calc():
-    assert a1.calc(5,6) == 30
-    assert a1.calc(5,6,"add") == 11
-    assert a1.calc(20,5,"divide") == 4
-    assert a1.calc(14,2.0,"multiply") == 28.0
-    assert a1.calc(12.6, 4.4, "subtract") == 8.2
-    assert a1.calc(9,5, "modulo") == 4
-    assert a1.calc(10,0,"divide") == "You can't divide by 0!"
-    assert a1.calc("first", "second", "multiply") == "You can't multiply those values!"#
+
 
 def calc(a, b, operation="multiply"):
     try:
@@ -41,21 +33,7 @@ def calc(a, b, operation="multiply"):
         return "You can't multiply those values!"
     
 # task 4: data type conversion
-# def test_data_type_conversion():
-#   result = a1.data_type_conversion("110", "int")
- #  assert type(result).__name__ == "int"
-  #  assert result == 110
-  #  result = a1.data_type_conversion("5.5", "float")
- #   assert type(result).__name__ == "float"
- #   assert result == 5.5
- #   result = a1.data_type_conversion(7,"float")
- #   assert type(result).__name__ == "float"
-#    assert result == 7.0
- #   result = a1.data_type_conversion(91.1,"str")
- #   assert type(result).__name__ == "str"
-  #  assert result == "91.1"
- 
- #   assert a1.data_type_conversion("banana", "int") == "You can't convert banana into a int."
+
 
 def data_type_conversion(value, target_type):
     try:
@@ -69,9 +47,7 @@ def data_type_conversion(value, target_type):
         return f"You can't convert {value} into a {target_type}."
 
 # Task 5: Grading System, Using *args
-#def test_grade():
-#    assert a1.grade(75,85,95) == "B"
-#    assert a1.grade("three", "blind", "mice") == "Invalid data was provided."
+
 
 def grade(*args):
     try:
@@ -98,9 +74,6 @@ def repeat(string,count):
         result += string
     return result
 #Task 7: Student Scores, Using **kwargs
-#def test_student_scores():
-    assert a1.student_scores("mean", Tom=75, Dick=89, Angela=91) == (75 + 89 + 91) / 3
-    assert a1.student_scores("best", Tom=75, Dick=89, Angela=91, Frank=50 ) == "Angela"
 
 def student_scores(mode, **kwargs):
     if mode == "mean":
@@ -139,13 +112,7 @@ def hangman(secret, guess):
     return result
 
 # Task 10: Pig Latin, Another String Manipulation Exercise
-#def test_pig_latin():
-    assert a1.pig_latin("apple") == "appleay"
-    assert a1.pig_latin("banana") == "ananabay"
-    assert a1.pig_latin("cherry") == "errychay"
-    assert a1.pig_latin("quiet") == "ietquay"
-    assert a1.pig_latin("square") == "aresquay"
-    assert a1.pig_latin("the quick brown fox") == "ethay ickquay ownbray oxfay"
+
 
 def pig_latin(text):
     vowels = "aeiou"
