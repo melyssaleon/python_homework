@@ -10,7 +10,6 @@ def greet(name):
 
 # task 3: calculate
 
-
 def calc(a, b, operation="multiply"):
     try:
         if operation == "add":
@@ -99,7 +98,8 @@ def titleize(text):
             result.append(word)
         else:
             result.append(word.capitalize())
-            return " ".join(result)
+
+    return " ".join(result)
 # Task 9: Hangman, with more String Operations
 #def test_hangman():
 #   assert a1.hangman("difficulty","ic") == "_i__ic____"
