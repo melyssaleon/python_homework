@@ -91,13 +91,14 @@ def titleize(text):
     small_words = ["a", "on", "the", "of", "and", "is", "in"]
     words = text.split()
     result = []
+
     for i, word in enumerate(words):
-        if i ==0 or i == len(words) - 1:
-            result.append(word.captalize())
+        if i == 0 or i == len(words) - 1:
+            result.append(word.capitalize())
         elif word in small_words:
             result.append(word)
         else:
-            result.append(word.capitalize ())
+            result.append(word.capitalize())
             return " ".join(result)
 # Task 9: Hangman, with more String Operations
 #def test_hangman():
@@ -118,6 +119,7 @@ def pig_latin(text):
     vowels = "aeiou"
     words = text.split()
     result = []
+
     for word in words:
         if word[0].lower() in vowels:
             result.append(word + "ay")
@@ -127,6 +129,7 @@ def pig_latin(text):
                if word[i:i+2].lower() == "qu":
                     i += 2
                     break
-            i += 1
+               else:
+                   i += 1
             result.append(word[i:] + word[:i] + "ay")
     return " ".join(result)
